@@ -532,7 +532,7 @@
                     <!-- MENU PRINCIPAL -->
 
                     <nav class="navbar navbar-expand-lg navbar-light bg-black">
-                        <a class="navbar-brand" href="inicioPT.html"><img src="imagens/logotipo.png" class="d-block w-50"></a>
+                        <a class="navbar-brand" href="index.html"><img src="imagens/logotipo.png" class="d-block w-50"></a>
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: none">
 
@@ -550,7 +550,7 @@
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ml-auto" style="font-family:Brandon Grotesque">
                                 <li class="nav-item fixed">
-                                    <div class="nav-link active a" href="#"><a href="index.html" style="color:#592978">INÍCIO</a></div>
+                                    <div class="nav-link" href="#"><a href="index.html" style="color:#592978">INÍCIO</a></div>
                                 </li>
                                 <li class="nav-item">
                                     <span class="nav-link"><a href="novidadesPT.html" style="color:#592978">NOVIDADES</a></span>
@@ -559,7 +559,7 @@
                                     <span class="nav-link"><a href="projetosDesenhoPT.html" style="color:#592978">PROJETOS</a></span>
                                 </li>
                                 <li class="nav-item">
-                                    <span class="nav-link"><a href="susanacarvalhoPT.html" style="color:#592978">SOBRE MIM</a></span>
+                                    <span class="nav-link active a"><a href="susanacarvalhoPT.html" style="color:#592978">SOBRE MIM</a></span>
                                 </li>
                                 <li class="nav-item">
                                     <span class="nav-link"><a href="contactoPT.php" style="color:#592978">CONTACTO</a></span>
@@ -574,237 +574,84 @@
     </div>
 
 <br>
-          
       
       
       
-      
-      
-      
-      
-      
-      
-<!-- SLIDER ou CAROUSEL -->     
-      
-      <div class="container">
-                <div class="row">
-                    <div class="col">
-                           
-                       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" style="z-index: ">
-                          <div class="carousel-inner">
-                             <div class="carousel-item active">
-                                <img src="imagens/slider1.jpg" class="d-block w-100" alt="...">
-                             </div>
-                             <div class="carousel-item">
-                                 <img src="imagens/slider2.jpg" class="d-block w-100" alt="...">
-                             </div>
-                         </div>
-                             <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                 <span class="sr-only">Previous</span>
-                             </a>
-                             <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                 <span class="sr-only">Next</span>
-                             </a>
-                       </div>
-                        
-               </div>
-            </div>
-        </div>  
-      
-      
-   <br>   
-   <br>    
-   <br>  
-      
-      
-      
-<!-- NOVIDADES --> 
- 
-       <!-- TITULO -->  
-      
-       <div class="container">
-            <p class="h4 py-4" style="font-family:Brandon Grotesque; color:#333333; font-style: normal; font-size:26px;"><a href="novidadesPT.html">NOVIDADES</a></p>
-                <div class="row">
+ <!-- FORMULÁRIO DE CONTACTO -->
 
-                        <!-- NOVIDADES 1 -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+
+                    <div class="h1">Contacto</div>
+
+                    <!-- tem de se colocar  "<form action ="teste.php" method= "post">" -->
                     
-                                  <!--  Para encostar as palavras à linha das imagens = retirar padding à esquerda no body do card que engloba os títulos e sub-títulos = <div class="card-body" style="padding-left:0">  -->
+                    <!-- "required" = obrigatório -->
+
                     
-                   <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="card">
-                            <a href="novidadesPT.html">
-                               <div class="zoom"> 
-                                  <img class="card-img-top" src="imagens/novidade1.jpg" class="img-responsive" alt="Card image cap" >
-                               </div>  
-                            </a>       
-                            <div class="card-body" style="padding-left:0" style=" width: 92%;">
-                                   <p class="card-text">3 maio - 27 julho 2025</p> 
-                                   <h5 class="card-title"><a href="novidadesPT.html"><b>ARTIS’ 25</b></a></h5>
+                   <form action="contactoPT.php" method="post">
+        
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="name">Nome</label>
+                                <input type="text" class="form-control rounded-0" id="name" name="visitor_name"  placeholder="Introduza o seu primeiro nome" pattern=[A-Z\a-z]{3,20} required>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="fname">Apelido</label>
+                                <input type="text" class="form-control rounded-0" id="fname" name="visitor_fname"  placeholder="Introduza o seu último nome" pattern=[A-Z\a-z]{3,20} required>
                             </div>
                         </div>
-                    </div>
-                    
-                        <!-- NOVIDADES 2 -->
-                    
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="card">
-                            <a href="novidadesPT.html">
-                                <div class="zoom">
-                                   <img class="card-img-top" src="imagens/novidade2.jpg" class="img-responsive" alt="Card image cap">
-                                </div>
-                            </a>     
-                            <div class="card-body" style="padding-left:0">
-                                 <p class="card-text">7 - 30 de junho 2025 </p>
-                                 <h5 class="card-title"><a href="novidadesPT.html"><b>XIII Bienal de Artes de Santa Catarina da Serra</b></a></h5>
-                            </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" class="form-control rounded-0" id="email" name="visitor_email" placeholder="Introduza o seu email" required>
                         </div>
-                    </div>
-                    
-                        <!-- NOVIDADES 3 -->
-                    
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="card">
-                            <a href="novidadesPT.html">
-                              <div class="zoom"> 
-                                 <img class="card-img-top" src="imagens/novidade3.jpg" alt="Card image cap">
-                              </div> 
-                            </a>     
-                            <div class="card-body" style="padding-left:0">
-                               <p class="card-text">21 março - 30 março 2025</p> 
-                               <h5 class="card-title"><a href="novidadesPT.html"><b>II Bienal Internacional do Alentejo 2025</b></a></h5>
-                            </div>
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <input type="text" class="form-control rounded-0" id="subject" name="visitor_subject" placeholder="Escreva o seu assunto" required>
                         </div>
-                    </div>
+                           <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="mensagem">Mensagem</label>
+                                <textarea class="form-control rounded-0" id="message"  name="visitor_message" placeholder="Escreva a sua mensagem" required></textarea>
+                            </div>
+                            <div class="form-group col-md-4">
+                            </div>
+
+                             <button type="submit" class="btn btn-outline-white text-white btn rounded-0" style="background-color:#592978" data-toggle="modal" data-target="#exampleModalLong"><b>Enviar Mensagem</b></button>
                         
+                            <br>
+                            <br>
+
+                            <p>Todos os campos são de preenchimento obrigatório.</p>
+
+                        </div>
+                    </form>
+                    
                 </div>
-            </div>
-     
-      
-   <br>   
-   <br>    
-   <br>  
-      
-      
-  
-      
-<!-- PROJETOS -->  
-      
-      <!-- TITULO -->
-      
-    
-     <div class="container">  
-         <p class="h4 py-4" style="font-family:Brandon Grotesque; color:#333333; font-style: normal; font-size:26px; "><a href="susanacarvalhoPT.html">PROJETOS</a></p>
-                    <div class="row">
-                        
 
-                        <!-- PROJETO 1 -->
+                        <!-- IMAGEM DO FORMULÁRIO -->
 
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
-                              <div class="zoom"> 
-                                <img class="card-img-top" src="imagens/1.jpg" alt="Card image cap">
-                              </div> 
-                            </a>   
-                            <div class="card-body" style="padding-left:0">
-                                <p class="card-text"><i>Desenho I Caneta e marcador</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Water Ring</a></b></h5>
-                            </div>
-                        </div>
+                 <div class="col-sm-6">
+        
+                        <img src="imagens/tecnicamistacortada.jpg" alt="Avatar" class="d-block w-100">    
+                </div>
 
-                        <!-- PROJETO 2 -->
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
-                              <div class="zoom"> 
-                                <img class="card-img-top" src="imagens/2.jpg" alt="Card image cap">
-                              </div>    
-                            </a>   
-                            <div class="card-body" style="padding-left:0">
-                                <p class="card-text"><i> Desenho I Caneta e marcador</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Amanita</a></b></h5>
-                            </div>
-                        </div>
-
-                        <!-- PROJETO 3 -->
-                        
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
-                              <div class="zoom">
-                                <img class="card-img-top" src="imagens/3.jpg" alt="Card image cap">
-                              </div>   
-                            </a> 
-                            <div class="card-body" style="padding-left:0">
-                                <p class="card-text"><i>Desenho I Caneta e marcador</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Sphere</a></b></h5>
-                            </div>
-                        </div>
-                  </div>
-               </div>
-
-      
-
-     <br>
-            
-                 <div class="container">
-                    <div class="row">
-                        
-
-                        <!-- PROJETO 4 -->
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
-                              <div class="zoom"> 
-                                <img class="card-img-top" src="imagens/4.jpg" alt="Card image cap">
-                              </div> 
-                            </a>   
-                            <div class="card-body" style="padding-left:0">
-                                <p class="card-text"><i>Desenho I Caneta e marcador</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Solar Eclipse</a></b></h5>
-                            </div>
-                        </div>
-
-                        <!-- PROJETO 5 -->
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
-                              <div class="zoom"> 
-                                <img class="card-img-top" src="imagens/5.jpg" alt="Card image cap">
-                              </div>    
-                            </a>   
-                            <div class="card-body" style="padding-left:0">
-                                <p class="card-text"><i>Desenho I Caneta e marcador</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Pine Tree</a></b></h5>
-                            </div>
-                        </div>
-
-                        <!-- PROJETO 6 -->
-                        
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
-                              <div class="zoom">
-                                <img class="card-img-top" src="imagens/6.jpg" alt="Card image cap">
-                              </div>   
-                            </a> 
-                            <div class="card-body" style="padding-left:0">
-                                <p class="card-text"><i>Desenho I Caneta e marcador</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Carnation</a></b></h5>
-                            </div>
-                        </div>
-                  </div>
-               </div>
-
-    <br>
-    <br>
           
+        </div>
+
+      </div>
+              
+      
+          
+      
       
 <!-- SOBRE MIM -->    
       
       <!-- TITULO --> 
       
 <div class="container" px-3>     
-  <p class="h4 py-4" style="font-family:Brandon Grotesque; color:#333333; font-style: normal; font-size:26px; padding-left:0"><a href="susanacarvalhoPT.html">SUSANA CARVALHO</a></p>
+  <p class="h4 py-4" style="font-family:Brandon Grotesque; color:#333333; font-style: normal; font-size:26px; padding-left:0"><a href="susanacarvalhoPT.html"></a></p>
       <div class="row">
           
          <div class="col-sm-6">
@@ -850,6 +697,7 @@
    <br>    
    <br>  
       
+         
       
       
       
@@ -994,6 +842,128 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+      
+      
+     
+<!-- PUS PHP NA MESMA PÁGINA PARA MODAL APARECER NA MESMA PÁGINA = APARECE MAS SÓ FUNCIONA PORQUE CARREGO NO BOTÃO ENVIAR MENSAGEM E A MENSAGEM DO SUCESSO DE ENVIO POR CAUSA DO MÉTODO GET APARECE SEMPRE EM BAIXO DA PÁGINA = RESOLVER I PHP FUNCIONA MAS PRECISA DE ESTAR TUDO SINCRONIZADO 
+
+NESTE CASO FICAM AS LINGUAGENS TODAS NA MESMA PÁGINA = HTML + CSS + PHP = NÃO ESTOUA VINCULAR UMA PÁGINA DE HTML COM OUTRA DE PHP--> 
+
+<?php
+
+   // FORMULÁRIO DE CONTACTO = PHP =  parte mecanismo dinâmico 
+
+       // parte que se refere  a todo o código PHP que se interliga com código HTML e código CSS da outra página = faz com que a pagina "contacto.php" + página "index.html" para todos os atributos e funcionalidades do formuário de contacto funcionarem corretamente (html + css + php)
+
+           // código que se refere aos elementos (primeiro nome + último nome + email + assunto + mensagem) que se encontram no  formulário de contacto para preenchimento
+   
+                // "$recipient =" refere-se ao email do proprietário do website, para onde vão ser enviadas as informações que o cliente preencheu no formulário de contacto
+
+                     // "if ($_POST) { $visitor_name.......... $recipient =......} = refere-se aos elementos que vão aperecer na mensagem (numa outra página isolada) para o cliente após ter preenchido o formulário de contacto = o seu nome + a mensagem  de envio ou não do email + o mecanismo do envio da mensagem  para proprietário do website
+
+
+if($_POST) {
+    $visitor_name = "";
+    $visitor_email = "";
+    $visitor_subject = "";
+    $visitor_message = "";
+    
+    $recipient = "susana.c.f.d.carvalho@gmail.com";
+
+    
+    if(isset($_POST['visitor_name'])) {
+        $visitor_name= filter_var($_POST['visitor_name'], FILTER_SANITIZE_STRING);
+    }
+    
+     
+    if(isset($_POST['visitor_fname'])) {
+        $visitor_fname= filter_var($_POST['visitor_fname'], FILTER_SANITIZE_STRING);
+    }
+    
+    
+    if(isset($_POST['visitor_email'])) {
+        $visitor_email= str_replace(array("\r", "\n", "%0a", "%0d"),  '', $_POST['visitor_email']);
+        $visitor_email= filter_var($visitor_email, FILTER_SANITIZE_STRING);
+    }
+    
+ 
+    if(isset($_POST['visitor_subject'])) {
+        $visitor_subject= htmlspecialchars($_POST['visitor_subject']);
+        
+    }
+    
+     if(isset($_POST['visitor_message'])) {
+        $visitor_message= htmlspecialchars($_POST['visitor_message']);
+        
+    }
+
+     
+    
+        // parte que mostra informações (assunto + mensagem + primeiro nome do cliente + último nome do cliente + email do cliente) enviadas para o email do proprietário do website após o preenchimento do formulário pelo cliente com sucesso
+
+    
+    $headers = 'MIME-Version: 1.0' . "\r\n"
+      
+  .'Assunto:  ' . $visitor_subject . "\r\n"
+  .'Mensagem:  ' . $visitor_message . "\r\n"
+  .'Primeiro Nome do cliente:  ' . $visitor_name . "\r\n"
+  .'Último Nome do cliente:  ' . $visitor_fname . "\r\n"     
+  .'Email do cliente: ' . $visitor_email . "\r\n";
+    
+    
+        // mensagens que aparecem em método "POST" numa outra página a validar ou não a entrega da mensagem ao cliente após o preenchimento do formuário
+    
+    
+    if(mail($recipient, $visitor_message, $headers)) {
+        
+        
+             // mensagem mostrada ao cliente sobre envio ou não da as informações preenchidas no formulário de contacto para o email do proprietário do website 
+        
+
+        
+        echo "" . $name . "<br>";
+        
+        echo ""; 
+        
+        
+            // código em PHP que, após o prrenchimento total dos campos do formulário de contacto,  redireciona a página de "CONTACTO.PHP" para outra que queiramos que seja a página de sucesso de envio = URL=.....= vai indicar a página para onde queremos que vá o user após o preenchimento correcto do form.
+        
+        
+        echo'<META HTTP-EQUIV="Refresh" Content="1; URL=paginavalidacaocorreta_contactoPT.php">';
+        
+      
+             //  echo "PARABÉNS!" . $name . "<br>";echo "<p>Obrigada pelo contacto, $visitor_name. Será contactado em menos de 24 horas.</p>"; } else { echo "UPS..." . $name . "<br>"; echo '<p>Pedimos desculpa, mas algo de errado aconteceu.</p>'; }}else{echo '<p>Algo não funcionou.</p>';}         = nesta linha de código foram apagadas as mengagens raiz dos Echo "..." para que não apareça nenhuma mensagem de validação ou não na página, visto que já coloquei um link que após o sucesso do preenchimento do formulário d vai reecaminhar para outra página isolada com um botão que se liga ao início do site = o objectivo é que tenha um lado estético e funcional não deixando o cliente sair do website = foi usado este código =    echo'<META HTTP-EQUIV="Refresh" Content="1; URL=paginadevalidacaocorrecta_contacto.php">';  = para se remeter  a nossa validação para a página pretendida + as mensagens caem no email de forma correta também
+
+ 
+        
+    } else {
+        
+        echo "" . $name . "<br>"; 
+        
+        echo '';
+        
+    }
+    
+    }else{
+    
+        echo '';
+    
+  
+}
+
+
+?>
+    
+   
+      
+      
+      
+      
+      
+      
+      
+      
       
   </body>
 </html>

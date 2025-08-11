@@ -282,7 +282,6 @@
         .container {
             cursor: pointer;
             border: none;
-            
         }
 
         .bar1,
@@ -293,7 +292,6 @@
             background-color: #663265;
             margin: 8px 0;
             transition: 0.4s;
-              
         }
 
         .change .bar1 {
@@ -429,6 +427,230 @@
         }
              
      
+     /* GALERIA */
+
+        
+        .imagem-galeria {
+           object-fit: contain;
+          
+          }
+     
+        * {
+            box-sizing: border-box;
+          
+        }
+
+        .row>.column {
+            padding: 0 8px;
+        }
+
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* The Modal (background) */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: black;
+        }
+
+        /* Modal Content */
+        .modal-content {
+            position: relative;
+            background-color: black;
+            margin: auto;
+            padding: 0;
+            width: 90%;
+            max-width: 1200px;
+            border: rounded-0;
+        }
+
+        /* The Close Button */
+        .close {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: white;
+            text-decoration: none;
+        }
+
+        .mySlides {
+            display: none;
+        }
+
+        .cursor {
+            cursor: pointer;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -50px;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            -webkit-user-select: none;
+       
+        }
+     
+     
+
+        /* Position the "next button" to the right */
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: ;
+        }
+
+        img {
+            margin-bottom: -4px;
+      
+       
+        }
+
+        .caption-container {
+            text-align: center;
+            background-color: black;
+            padding: 2px 16px;
+            color: white;     
+        }
+
+        .demo {
+            opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+            opacity: 1;
+        }
+
+        img.hover-shadow {
+            transition: 0.3s;
+        }
+
+        .hover-shadow:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+     
+     
+     
+        /* EFEITO HOVER PARA O APARECIMENTO DE LEGENDA DA IMAGEM  */
+
+
+        .image {
+
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            border: none;
+            margin:0 auto;
+            display: block;
+          
+        }
+
+         /*  "width: 92.2%" para a legenda ter a largura certa ! */
+        
+             /*  left: 15px; = desvio da legenda para a esquerda para o sítio correto  */
+
+        
+        .sobreposicao {
+            position: absolute;
+            bottom: 0;
+            left: 15px;
+            right: 0;
+            background-color: #DADADA;
+            overflow: hidden;
+            width: 92.5%;
+            height: 0;
+            transition: .5s ease;
+            border: none;
+            
+        }
+
+        /* aqui o height: () % refere até que altura se quer o background da legenda */
+        
+
+        .container:hover .sobreposicao {
+            height: 30%;
+            border:0px;
+        }
+        
+             
+        .overlay{
+            
+            position: absolute;  
+            
+         }
+     
+      /* TEXTO DENTRO DAS LEGENDAS DAS IMAGENS */
+     
+      /* "font-size: 14px;" = tamanho das letras 14 px */
+        
+        /* "top: 55%;" = percentagem de 55% no atributo top - trocar nome text */
+        
+        .text2 {
+            color: #333333;
+            font-size: 14px;   
+            top: 55%;
+            left: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+            
+            position: absolute;
+            
+        }
+        
+        .textBox2 {
+            
+            position: absolute;
+            
+        }
+        
+     
+     
 </style>  
       
   </head>
@@ -532,7 +754,7 @@
                     <!-- MENU PRINCIPAL -->
 
                     <nav class="navbar navbar-expand-lg navbar-light bg-black">
-                        <a class="navbar-brand" href="inicioPT.html"><img src="imagens/logotipo.png" class="d-block w-50"></a>
+                        <a class="navbar-brand" href="index.html"><img src="imagens/logotipo.png" class="d-block w-50"></a>
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: none">
 
@@ -549,14 +771,15 @@
 
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ml-auto" style="font-family:Brandon Grotesque">
-                                <li class="nav-item fixed">
-                                    <div class="nav-link active a" href="#"><a href="index.html" style="color:#592978">INÍCIO</a></div>
+                              
+                                 <li class="nav-item">
+                                    <span class="nav-link"><a href="index.html" style="color:#592978">INÍCIO</a></span>
                                 </li>
                                 <li class="nav-item">
                                     <span class="nav-link"><a href="novidadesPT.html" style="color:#592978">NOVIDADES</a></span>
-                                </li>
-                                <li class="nav-item">
-                                    <span class="nav-link"><a href="projetosDesenhoPT.html" style="color:#592978">PROJETOS</a></span>
+                                </li>   
+                                <li class="nav-item fixed">
+                                    <div class="nav-link active a" href="#"><a href="projetosDesenhoPT.html" style="color:#592978">PROJETOS</a></div>
                                 </li>
                                 <li class="nav-item">
                                     <span class="nav-link"><a href="susanacarvalhoPT.html" style="color:#592978">SOBRE MIM</a></span>
@@ -577,281 +800,122 @@
           
       
       
-      
-      
-      
-      
-      
-      
-      
-<!-- SLIDER ou CAROUSEL -->     
-      
-      <div class="container">
-                <div class="row">
-                    <div class="col">
-                           
-                       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" style="z-index: ">
-                          <div class="carousel-inner">
-                             <div class="carousel-item active">
-                                <img src="imagens/slider1.jpg" class="d-block w-100" alt="...">
-                             </div>
-                             <div class="carousel-item">
-                                 <img src="imagens/slider2.jpg" class="d-block w-100" alt="...">
-                             </div>
-                         </div>
-                             <a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                 <span class="sr-only">Previous</span>
-                             </a>
-                             <a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                 <span class="sr-only">Next</span>
-                             </a>
-                       </div>
-                        
-               </div>
-            </div>
-        </div>  
-      
-      
-   <br>   
-   <br>    
-   <br>  
-      
-      
-      
-<!-- NOVIDADES --> 
- 
-       <!-- TITULO -->  
-      
-       <div class="container">
-            <p class="h4 py-4" style="font-family:Brandon Grotesque; color:#333333; font-style: normal; font-size:26px;"><a href="novidadesPT.html">NOVIDADES</a></p>
-                <div class="row">
+       <!-- MENU 2 -->
 
-                        <!-- NOVIDADES 1 -->
-                    
-                                  <!--  Para encostar as palavras à linha das imagens = retirar padding à esquerda no body do card que engloba os títulos e sub-títulos = <div class="card-body" style="padding-left:0">  -->
-                    
-                   <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="card">
-                            <a href="novidadesPT.html">
-                               <div class="zoom"> 
-                                  <img class="card-img-top" src="imagens/novidade1.jpg" class="img-responsive" alt="Card image cap" >
-                               </div>  
-                            </a>       
-                            <div class="card-body" style="padding-left:0" style=" width: 92%;">
-                                   <p class="card-text">3 maio - 27 julho 2025</p> 
-                                   <h5 class="card-title"><a href="novidadesPT.html"><b>ARTIS’ 25</b></a></h5>
-                            </div>
-                        </div>
-                    </div>
-                    
-                        <!-- NOVIDADES 2 -->
-                    
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="card">
-                            <a href="novidadesPT.html">
-                                <div class="zoom">
-                                   <img class="card-img-top" src="imagens/novidade2.jpg" class="img-responsive" alt="Card image cap">
-                                </div>
-                            </a>     
-                            <div class="card-body" style="padding-left:0">
-                                 <p class="card-text">7 - 30 de junho 2025 </p>
-                                 <h5 class="card-title"><a href="novidadesPT.html"><b>XIII Bienal de Artes de Santa Catarina da Serra</b></a></h5>
-                            </div>
-                        </div>
-                    </div>
-                    
-                        <!-- NOVIDADES 3 -->
-                    
-                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="card">
-                            <a href="novidadesPT.html">
-                              <div class="zoom"> 
-                                 <img class="card-img-top" src="imagens/novidade3.jpg" alt="Card image cap">
-                              </div> 
-                            </a>     
-                            <div class="card-body" style="padding-left:0">
-                               <p class="card-text">21 março - 30 março 2025</p> 
-                               <h5 class="card-title"><a href="novidadesPT.html"><b>II Bienal Internacional do Alentejo 2025</b></a></h5>
-                            </div>
-                        </div>
-                    </div>
-                        
+        <div class="container">
+            <div class="row">
+                <div class="col-sm">
+
+                    <!-- Navbar com links justificados na página + com o mesmo espaçamento entre eles 
+                   = susbsitutir "justify-content-center" (que só coloca os elementos no centro mas não os coloca justificados na página) + com o mesmo espaçamento entre eles por "justify-content: space-between" -->
+
+
+                    <ul class="navbar nav justify-content: space-between" style="font-family:Brandon Grotesque">
+
+                        <li class="nav-item">
+                            <span class="nav-link" href="#"><a href="projetosDesenhoPT.html" style="color:#592978">Desenho</a></span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link" href="#"><a href="projetosPinturaPT.html" style="color:#592978">Pintura</a></span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link" href="#"><a href="projetosTecnicaMistaPT.html" style="color:#592978">Técnica Mista</a></span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link" href="#"><a href="projetosDiarioGraficoPT.html" style="color:#592978">Diário Gráfico</a></span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link" href="#"><a href="projetosGravuraPT.html" style="color:#592978">Gravura</a></span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link active a" href="#"><a href="projetosArteDigitalPT.html" style="color:#592978">Arte Digital</a></span>
+                        </li>
+                
+                    </ul>
                 </div>
             </div>
-     
+        </div>
+
+
+        <br>
+        <br>  
       
-   <br>   
-   <br>    
-   <br>  
       
       
-  
       
-<!-- PROJETOS -->  
       
-      <!-- TITULO -->
       
-    
-     <div class="container">  
-         <p class="h4 py-4" style="font-family:Brandon Grotesque; color:#333333; font-style: normal; font-size:26px; "><a href="susanacarvalhoPT.html">PROJETOS</a></p>
-                    <div class="row">
+  <!-- ARTE DIGITAL -->
+
+        <!-- Para centrar a imagem em bootstrap usar 3 col-4 (2 vazias e 1 no centro com a imagem), tendo todo o container dentro de uma section -->
+
+                 <!-- em  "<div class="text" style="left:32%">" ajusta-se  -->
+
+        <section>
+
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-4 col-md-offset-4">
+                    </div>
+
+                    
+                    <div class="col-md-4 col-md-offset-4">
+                        <img src="imagens/artedigital1.jpg" alt="Avatar" class="image" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
                         
-
-                        <!-- PROJETO 1 -->
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
-                              <div class="zoom"> 
-                                <img class="card-img-top" src="imagens/1.jpg" alt="Card image cap">
-                              </div> 
-                            </a>   
-                            <div class="card-body" style="padding-left:0">
-                                <p class="card-text"><i>Desenho I Caneta e marcador</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Water Ring</a></b></h5>
+                        <div class="sobreposicao">
+                            <div class="text2" style="left:21%">
+                                <p align="left"><b>Speculum I</b><br>Grafite sobre papel<br>50 x 50 cm<br></p>
                             </div>
                         </div>
-
-                        <!-- PROJETO 2 -->
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
-                              <div class="zoom"> 
-                                <img class="card-img-top" src="imagens/2.jpg" alt="Card image cap">
-                              </div>    
-                            </a>   
-                            <div class="card-body" style="padding-left:0">
-                                <p class="card-text"><i> Desenho I Caneta e marcador</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Amanita</a></b></h5>
-                            </div>
-                        </div>
-
-                        <!-- PROJETO 3 -->
+         
+                      </div>  
                         
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
-                              <div class="zoom">
-                                <img class="card-img-top" src="imagens/3.jpg" alt="Card image cap">
-                              </div>   
-                            </a> 
-                            <div class="card-body" style="padding-left:0">
-                                <p class="card-text"><i>Desenho I Caneta e marcador</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Sphere</a></b></h5>
-                            </div>
-                        </div>
-                  </div>
-               </div>
+                    </div>
+                
 
-      
+                    <div class="col-md-4 col-md-offset-4">
+                    </div>
 
-     <br>
-            
-                 <div class="container">
-                    <div class="row">
-                        
 
-                        <!-- PROJETO 4 -->
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
-                              <div class="zoom"> 
-                                <img class="card-img-top" src="imagens/4.jpg" alt="Card image cap">
-                              </div> 
-                            </a>   
-                            <div class="card-body" style="padding-left:0">
-                                <p class="card-text"><i>Desenho I Caneta e marcador</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Solar Eclipse</a></b></h5>
-                            </div>
-                        </div>
-
-                        <!-- PROJETO 5 -->
-
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
-                              <div class="zoom"> 
-                                <img class="card-img-top" src="imagens/5.jpg" alt="Card image cap">
-                              </div>    
-                            </a>   
-                            <div class="card-body" style="padding-left:0">
-                                <p class="card-text"><i>Desenho I Caneta e marcador</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Pine Tree</a></b></h5>
-                            </div>
-                        </div>
-
-                        <!-- PROJETO 6 -->
-                        
-                        <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
-                              <div class="zoom">
-                                <img class="card-img-top" src="imagens/6.jpg" alt="Card image cap">
-                              </div>   
-                            </a> 
-                            <div class="card-body" style="padding-left:0">
-                                <p class="card-text"><i>Desenho I Caneta e marcador</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Carnation</a></b></h5>
-                            </div>
-                        </div>
-                  </div>
-               </div>
-
-    <br>
-    <br>
-          
-      
-<!-- SOBRE MIM -->    
-      
-      <!-- TITULO --> 
-      
-<div class="container" px-3>     
-  <p class="h4 py-4" style="font-family:Brandon Grotesque; color:#333333; font-style: normal; font-size:26px; padding-left:0"><a href="susanacarvalhoPT.html">SUSANA CARVALHO</a></p>
-      <div class="row">
-          
-         <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body"style="padding-left:0">
-                      <img src="imagens/0.jpg" class="w-100" >   
                 </div>
-             </div>
-          </div>
-          
-          <div class="col-sm-6">
-              <div class="card">
-                <div class="card-body" style="padding-left:0">
-                   <p class="card-text">   
-                    Artista Visual.
-                    <br>                        
-                    <br>          
-                    Licenciada em Pintura pela Faculdade de Belas-Artes da Universidade de Lisboa.
-                    <br>                        
-                    <br>                       
-                    Começa a expor em 2010 em
-                    exposições nacionais e internacionais.
-                    <br>                        
-                    <br>                                         
-                    O seu processo de trabalho desenvolve-se nas áreas de pintura, desenho, gravura e arte digital.
-                    <br>
-                    <br> 
-                    As suas obras abordam os conceitos de <em>Espírito do
-                    Lugar</em> e <em>Espelho</em> dentro do tema da Paisagem.
-                    </p>
-                </div>
-             </div>
-          </div>
-      </div> 
-</div> 
+
+           
+        </section>
+
+        <br>
+        <br>
+        <br>
+        <br>
+
+ <!-- GALERIA -->
         
-            
-   <br>   
-   <br>    
-   <br> 
-      
-   <br>   
-   <br>    
-   <br>  
-      
-      
-      
+        <!-- "lightbox_trigger" = para fazer zoom à imagem dentro da galeria -->
+        
+        <div id="myModal" class="modal" style="text-align: center">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <a href ="imagens/artedigital1.jpg" class=" lightbox_trigger"><img src="imagens/artedigital1.jpg" class="imagem-galeria" style="width:50%; margin-bottom: 15px"></a>
+                    <div class="p" style="color:grey; font-size: 12px;"><b>Speculum I</b> - Grafite sobre papel - 50 x 50 cm - 2012</div>
+                </div>
+
+                
+
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                <div class="caption-container">
+                    <p id="caption"></p>
+                </div>
+
+
+            </div>
+        </div>
+
+
       
 <!-- FOOTER -->
       
@@ -994,6 +1058,61 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      
+      
+      <!-- Script da galeria -->
+
+        <script>
+            function openModal() {
+                document.getElementById("myModal").style.display = "block";
+            }
+
+            function closeModal() {
+                document.getElementById("myModal").style.display = "none";
+            }
+
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                captionText.innerHTML = dots[slideIndex - 1].alt;
+            }
+            
+                </script>
+        
+        
+            <!-- Script para fazer efeito fade na passagem das imagens da galeria -->
+        
+  
+      
+      
+      
       
   </body>
 </html>
