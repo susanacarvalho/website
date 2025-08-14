@@ -1,52 +1,48 @@
-
-<!doctype html>
-
-
+<!DOCTYPE html>
 <html lang="pt">
-   
-    
-<!-- HEAD --> 
-    
-  <head>
-    
+
+<head>
     <meta charset="utf-8">
-    <title>Website Susana Carvalho</title>
+
+    <title>Newsletter</title>
     
     <!-- Font Montserrat = google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
-      
+    
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-      
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-      
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" >
-      
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
     <!-- Meta Name Tag = texto identificativo do site que aparece no google = fundamental para identificar o site -->
     <meta name="description" content="Website onde pode encontrar os trabalhos da artista Susana Carvalho.">
     <meta name="keywords" content="arte, desenho, pintura, técnica mista, gravura, instalação, fotografia, design, freelancer">
 
-      
-      
- <style>
-   
 
-     
-     /* Para tirar o border às cards */
+    <!-- Função de validação do Formulário -->
+
+    <script>
+        function validateForm() {
+            var x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+                alert("Name must be filled out");
+                return false;
+            }
+        }
+
+    </script>
+
+    <style>
         
-        .card {
-           border:none;
-        } 
-     
-     
-      /* Font Brandon Grotesque Light que se encontra na pasta do site */
+        /* Código para retirar a marca de água 000webhost = tem de estar dentro de <head></head> e depois dentro da parte <still></still> */
+        
+        img[alt="www.000webhost.com"]{display:none;}
+        
+        
+        
+        /* Font Brandon Grotesque Light que se encontra na pasta do site */
         
         @font-face{
             src:url(fonts/brandon-grotesque-light-58a8a4b38001d.ttf);
@@ -56,6 +52,7 @@
         /* PARA TIRAR O SUBLINHADO RAIZ DOS LINKS NAVBAR - MENU */
 
         a:link {
+            color: #6666ff;
             background-color: transparent;
             text-decoration: none;
         }
@@ -70,7 +67,8 @@
         }
 
         .navbar span {
-            display: inline-block; 
+            display: inline-block;
+            margin: 10px 2% 10px 2%;
         }
 
         .navbar span::after {
@@ -87,14 +85,7 @@
             transform: scaleX(1);
         }
 
-        /*LINHA FIXA LINK = para a linha que tem a pagina aberta ficar fixa */
-
-        .active a {
-            border-bottom: solid 3px #66ccff;
-            padding-bottom: 4px;
-        }
-        
-        /*MARGEM = grau de opacidade do botão quando se faz hover*/
+        /*MARGEM  = grau de opacidade do botão quando se faz hover*/
 
         .h1 {
             margin-top: 25px;
@@ -113,7 +104,7 @@
             transition: 0.3s;
         }
 
-        /* FADE EFFECT = grau de opacidade do botão quando se faz hover*/
+        /*FADE EFFECT = grau de opacidade do botão quando se faz hover*/
 
         .btn:hover {
             opacity: 1
@@ -123,7 +114,6 @@
 
         .linha {
             background-color: white;
-            
         }
 
         /* CARACTERÍSTICAS DO BOTÃO QUE VAI AO TOPO */
@@ -147,11 +137,11 @@
             scroll-behavior: smooth;
         }
 
-        /* REGRA PARAO WEBSITE FICAR TODO DENTRO DE CONTAINER-FLUID E NÃO TER AS MARGENS BRANCAS PRÓPRIAS DO BOOTSTRAP */
+        /* REGRA PARA O WEBSITE FICAR TODO DENTRO DE CONTAINER-FLUID E NÃO TER AS MARGENS BRANCAS PRÓPRIAS DO BOOTSTRAP */
 
         .container-fluid {
             padding-left: 0;
-            padding-right: no;
+            padding-right: 0;
         }
 
         /* COR DAS DOS ICONS DAS REDES SOCIAIS DO FOOTER */
@@ -181,7 +171,7 @@
         }
         
         /* CONTACTO */
-        
+
         .far fa-envelope {
         }
 
@@ -197,30 +187,32 @@
         
         .iconingles:hover {
             background-image: url('imagens/ENfundoroxo.png');
-               
         }
-        
-       /* SEARCH BOX QUE OCUPA PARTE DA PÁGINA */
+        /* SEARCH BOX QUE OCUPA PARTE DA PÁGINA */
 
         * {
             box-sizing: border-box;
         }
 
         .openBtn {
-            background:white;
+            background: white;
             border: none;
             padding: 10px 15px;
             font-size: 20px;
             cursor: pointer;
             float: right;
         }
-        
+
+        .openBtn:hover {
+            background: white;
+        }
+
         .overlay {
             height: 30%;
             width: 100%;
             display: none;
             position: fixed;
-            z-index: 2;
+            z-index: 1;
             top: 0;
             left: 0;
             background-color: rgb(0, 0, 0);
@@ -234,7 +226,6 @@
             text-align: center;
             margin-top: 30px;
             margin: auto;
-            
         }
 
         .overlay .closebtn {
@@ -281,19 +272,16 @@
 
         .container {
             cursor: pointer;
-            border: none;
-            
         }
 
         .bar1,
         .bar2,
         .bar3 {
             width: 30px;
-            height: 2px;
+            height: 5px;
             background-color: #663265;
-            margin: 8px 0;
+            margin: 6px 0;
             transition: 0.4s;
-              
         }
 
         .change .bar1 {
@@ -309,142 +297,25 @@
             -webkit-transform: rotate(45deg) translate(-8px, -8px);
             transform: rotate(45deg) translate(-8px, -8px);
         }
-
         
-        /* Para mover imagem */
         
-        .elemento {
-            will-change: transform;
-            transform: perspective(2000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1);
-        }
-        
-        .product-image {
-           height: 50%;
-           margin: auto;
-           width: 94%;
-           transition: height 1s ease-out;
-           -webkit-transform: translateZ(2.5rem);
-           transform: translateZ(2.5rem);
-        
-        }
         
         /* Para tirar o border às cards */
         
         .card {
-          border:none;   
-        } 
-        
-        /* Tamanho e cor dos títulos e subtítulos das legendas */
-        
-        .card-text{
-         font-size:14px; 
-         color:grey;       
-        } 
-        
-        .card-title{
-         font-size:16px;
-         color:black;
-        } 
-        
-        /* Para por o site todo dentro de uma "border-box" */
-        
-        * {
-        box-sizing: border-box;
-        }
+            border:none;     
+        }  
 
-        /* Para dar zoom às imagens através de hover = animação com hover */
-        
-        .zoom {
-	      overflow: hidden;
-        }
+    </style>
 
-        .zoom img {
-	      max-width: 100%;
-	      -moz-transition: all 0.3s;
-	      -webkit-transition: all 0.3s;
-	      transition: all 0.3s;
-        }
+</head>
 
-       .zoom:hover img {
-	      -moz-transform: scale(1.1);
-	      -webkit-transform: scale(1.1);
-	      transform: scale(1.1);
-        }
 
-      .text-item {
-	     position: absolute;
-	     left: 5%;
-	     right: 5%;
-	     bottom: 20px;
-	     z-index: 10;
-	     padding-top: 20px;
-	     padding-bottom: 20px;
-	     color: #ffffff;
-	     text-align: center;
-	     font-weight: 700;
-	     text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-        }
-         
-        /* Para tirar a azul de link */
-        
-        a {
-          color: inherit; 
-        }
-                    
-        /* Para dar colocar a cor pretendida no hover */
-        
-        a:hover {
-          color:#592978;
-        }
-        
-     
-     
-      footer {
-           margin:0 !important;
-           padding: 0 !important;
-     
-        }
-     
-     
-     
-        /* MEDIA QUERIES */
-        
-        /* Desktop */
-        
-        
-          @media(min-width: 1200px){
-            
-        }
-        
-        /* Tablet */
-        
-           @media(max-width: 990px){
-            
-        }
-        
-        /* Mobile */
-        
-           @media(max-width: 480px){
-                 
-        }
-             
-     
-</style>  
-      
-  </head>
-    
-    
-        
-    
-    
-<!-- BODY -->
-    
-  <body>
-      
-             
- <!-- MENU 1 --> 
- 
-     <div class="container-fluid">
+<body>
+
+    <div class="container-fluid">
+
+      <!-- MENU 1 -->
 
         <div class="container">
             <div class="row">
@@ -461,82 +332,78 @@
                                 <input type="text" placeholder="Insira o termo de pesquisa" name="word" id="word">
                                 <button type="button" onclick="search(document.getElementById('word').value);"><i class="fa fa-search"></i></button>
                                 <script>        
-                                   function search(word) {
+                                    function search(word) {
                                         word = word.toUpperCase();
-                                        if (word == "DESENHO") {
-                                            window.location = "projetosDesenhoPT.html";
-                                        } else if (word == "PINTURA") {
-                                            window.location = "projetosPinturaPT.html";
-                                        } else if (word == "TÉCNICA MISTA" || word == "TECNICA MISTA") {
-                                            window.location = "projetosTécnicaMistaPT.html";
-                                        } else if (word == "DIÁRIO GRÁFICO" || word == "DIARIO GRAFICO" || word == "DIÁRIO GRAFICO" ||     word == "DIARIO GRÁFICO") {
-                                            window.location = "projetosDiarioGraficoPT.html";
-                                        } else if (word == "GRAVURA") {
-                                            window.location = "projetosGravuraPT.html";
-                                        } else if (word == "INSTALAÇÃO" || word == "INSTALAÇAO") {
-                                            window.location = "projetosInstalaçãoPT.html";
-                                        } else if (word == "FOTOGRAFIA") {
-                                            window.location = "projetosFotografiaPT.html";
-                                        } else if (word == "DRAWING") {
-                                            window.location = "projectsDrawingEN.html";
-                                        } else if (word == "PAINTING") {
-                                            window.location = "projectsPaintingEN.html";
-                                        } else if (word == "MIXED MEDIA") {
-                                            window.location = "projectsSketchbookEN.html";
-                                        } else if (word == "SKETCH BOOK") {
-                                            window.location = "projectsMixedMediaEN.html";
-                                        } else if (word == "PRINTMAKING") {
-                                            window.location = "projectsPrintmakingEN.html";
-                                        } else if (word == "INSTALLATION") {
-                                            window.location = "projectsInstallationEN.html";
-                                        } else if (word == "PHOTOGRAPHY") {
-                                            window.location = "projectsPhotographyEN.html";
-                                             } else if (word == "ARTE DIGITAL") {
-                                            window.location = "projetosArteDigitalPT.html";
-                                        } else if (word == "DIGITAL ART") {
-                                            window.location = "projectsDigitalArtEN.html";   
-                                            
-                                        } else {
-                                            alert("Não encontramos resultados para a sua pesquisa. Por favor, tente com outra palavra.");
+                                        if(word=="DESENHO"){
+                                            window.location="projetosDesenhoPT.html";
+                                        }else if(word=="PINTURA"){
+                                            window.location="projetosPinturaPT.html";
                                         }
-                                    }
-                                     
+                                        else if(word=="TÉCNICA MISTA" || word=="TECNICA MISTA"){
+                                            window.location="projetosTécnicaMistaPT.html";
+                                        }
+                                        else if(word=="GRAVURA"){
+                                            window.location="projetosGravuraPT.html";
+                                        }
+                                        else if(word=="INSTALAÇÃO" || word=="INSTALAÇAO"){
+                                            window.location="projetosInstalaçãoPT.html";
+                                        }
+                                        else if(word=="FOTOGRAFIA"){
+                                            window.location="projetosFotografiaPT.html";
+                                        }  
+                                        else if(word=="DRAWING"){
+                                            window.location="projectsDrawingEN.html";
+                                        } 
+                                        else if(word=="PAINTING"){
+                                            window.location="projectsPaintingEN.html";
+                                        } 
+                                        else if(word=="MIXED MEDIA"){
+                                            window.location="projectsMixedMediaEN.html";
+                                        } 
+                                        else if(word=="PRINTMAKING"){
+                                            window.location="projectsPrintmakingEN.html";
+                                        } 
+                                        else if(word=="INSTALLATION"){
+                                            window.location="projectsInstallationEN.html";
+                                        } 
+                                        else if(word=="PHOTOGRAPHY"){
+                                            window.location="projectsPhotographyEN.html";
+                                        } 
+                                        
+                                        else{
+                                            alert ("Não encontramos resultados para a sua pesquisa. Por favor, tente com outra palavra.");
+                                        }
+                                    }    
                                </script>
                             </form>
                         </div>
                     </div>
-                    
-                    
 
-    <!--            
-         <div class="container">
+       <div class="container">
             <div class="row">
                 <div class="col-sm">          
                     
-                     ICON SEARCH = para abrir janela search 
+                    <!-- ICON SEARCH = para abrir janela search -->
                     
                     <button class="openBtn" onclick="openSearch()"><i class="fas fa-search" style="color:#592979; background-color:none;"></i></button>
 
-                     ICON INGLÊS = para mudar idiomas 
+                    <!-- ICON INGLÊS = para mudar idiomas -->
 
                     <div class="iconingles">
-                        <a href="homeEN.html"><img src="imagens/EN.png"></a>
+                        <a href="newsletterEN.php"><img src="imagens/EN.png"></a>
                     </div>
                     
                 </div>
              </div>
-         </div>                         
-                    
-    -->       
-                    
+         </div> 
+
                     <!-- MENU PRINCIPAL -->
 
                     <nav class="navbar navbar-expand-lg navbar-light bg-black">
-                        <a class="navbar-brand" href="index.html"><img src="https://res.cloudinary.com/dwe9vcxln/image/upload/v1754954442/logotipo_lbdcm4.png" class="d-block w-50"></a>
+                        <a class="navbar-brand" href="inicioPT.html"><img src="https://res.cloudinary.com/dwe9vcxln/image/upload/v1754954442/logotipo_lbdcm4.png" class="d-block w-50"></a>
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: none">
 
-                            <!-- MENU HAMBURGUER + CLOSE ICON  -->
                             <!-- problema do sublinhado por baixo do menu hamburguer resolvido = mudar nome "span" para "div" onde se encontram as bars (barras do menu hamburguer)e assim esse elemento não é afetado = mesmo procedimento para os links da barra de menus para não aparecerem 2 barras por baixo do link selecionado -->
                             
                             <div class="container" onclick="myFunction(this)">
@@ -544,13 +411,13 @@
                                 <div class="bar2"></div>
                                 <div class="bar3"></div>
                             </div>
-                            
+
                         </button>
 
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ml-auto" style="font-family:Brandon Grotesque">
                                 <li class="nav-item fixed">
-                                    <div class="nav-link" href="#"><a href="index.html" style="color:#592978">INÍCIO</a></div>
+                                    <span class="nav-link"><a href="index.html" style="color:#592978">INÍCIO</a></span>
                                 </li>
                                 <li class="nav-item">
                                     <span class="nav-link"><a href="novidadesPT.html" style="color:#592978">NOVIDADES</a></span>
@@ -559,10 +426,10 @@
                                     <span class="nav-link"><a href="projetosDesenhoPT.html" style="color:#592978">PROJETOS</a></span>
                                 </li>
                                 <li class="nav-item">
-                                    <span class="nav-link"><a href="susanacarvalhoPT.html" style="color:#592978">SOBRE MIM</a></span>
+                                    <span class="nav-link"><a href="susanacarvalhoPT.html" style="color:#592978">SUSANA CARVALHO</a></span>
                                 </li>
                                 <li class="nav-item">
-                                    <span class="nav-link active a"><a href="contactoPT.php" style="color:#592978">CONTACTO</a></span>
+                                    <span class="nav-link"><a href="contactoPT.php" style="color:#592978">CONTACTO</a></span>
                                 </li>
                             </ul>
                         </div>
@@ -571,103 +438,122 @@
                 </div>
             </div>
         </div>
-    </div>
 
-<br>
-      
-      
-      
- <!-- FORMULÁRIO DE CONTACTO -->
+        <!-- FORMULÁRIO DE NEWSLETTER-->
 
         <div class="container">
             <div class="row">
                 <div class="col-sm-6">
 
-                    <div class="h1">Contacto</div>
+                          <!-- Título "Newsletter" -->
 
-                    <!-- tem de se colocar  "<form action ="teste.php" method= "post">" -->
-                    
-                    <!-- "required" = obrigatório -->
-
-                    
-                   <form action="contactoPT.php" method="post">
         
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="name">Nome</label>
-                                <input type="text" class="form-control rounded-0" id="name" name="visitor_name"  placeholder="Introduza o seu primeiro nome" pattern=[A-Z\a-z]{3,20} required>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="fname">Apelido</label>
-                                <input type="text" class="form-control rounded-0" id="fname" name="visitor_fname"  placeholder="Introduza o seu último nome" pattern=[A-Z\a-z]{3,20} required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control rounded-0" id="email" name="visitor_email" placeholder="Introduza o seu email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Assunto</label>
-                            <input type="text" class="form-control rounded-0" id="subject" name="visitor_subject" placeholder="Escreva o seu assunto" required>
-                        </div>
-                           <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="mensagem">Mensagem</label>
-                                <textarea class="form-control rounded-0" id="message"  name="visitor_message" placeholder="Escreva a sua mensagem" required></textarea>
-                            </div>
-                            <div class="form-group col-md-4">
-                            </div>
-
-                             <button type="submit" class="btn btn-outline-white text-white btn rounded-0" style="background-color:#592978" data-toggle="modal" data-target="#exampleModalLong"><b>Enviar Mensagem</b></button>
-                        
-                            <br>
-                            <br>
-
-                            <p>Todos os campos são de preenchimento obrigatório.</p>
-
-                        </div>
-                    </form>
-                    
-                </div>
-
-                        <!-- IMAGEM DO FORMULÁRIO -->
-
-                 <div class="col-sm-6">
+     <div class="h1">Newsletter</div>
         
-                        <img src="https://res.cloudinary.com/dwe9vcxln/image/upload/v1754953980/0_zdf5p1.jpg" alt="Avatar" class="d-block w-100">    
-                </div>
+                       <form action="newsletterPT.php" method="post">      
+                            
+                            
+     <!-- Campo primeiro nome -->
 
-          
-        </div>
-
-      </div>
-              
-      
-          
-      
-      
+               <!-- "required" = campo de prenchimento obrigatório -->
+        
+        
+               <div class="row">
+                   <div class="col">
+                      <div class="form-group">
+                          <label for="name"><b>Nome</b></label>
+                          <input type="text" id="name" name="visitor_name" placeholder="Introduza o seu primeiro nome" class="form-control rounded-0" pattern=[A-Z\sa-z]{3,20} required>
+                       </div>
+                    </div>
+   
+                         
+               <!-- Campo último nome -->
             
-   <br>   
-   <br>    
-   <br> 
-      
-   <br>   
-   <br>    
-   <br>  
-      
-         
-      
-      
-      
-<!-- FOOTER -->
-      
-      <!-- "container-fluid" permite que o footer se expanda até limite e <div class="col" style="background-color: black">  -->
-      
-     <div class="container-fluid">
-            <div class="row">
-                <div class="col" style="background-color: black">
+               <!-- "required" = campo de prenchimento obrigatório -->
+                   
 
-                    <div class="footer text-white text-center p-3">
+                 <div class="col">
+                     <div class="form-group">
+                        <label for="fname"><b>Apelido</b></label>
+                        <input type="text" id="fname" name="visitor_fname" placeholder="Introduza o seu último nome" class="form-control rounded-0" pattern=[A-Z\sa-z]{3,20} required>
+                     </div>
+                 </div>
+               </div>
+                  
+   
+         <!-- Campo email -->
+
+                <!-- "required" = campo de prenchimento obrigatório -->
+                          
+                          <!-- Ao escrever "input type="email" o sistema começa a pedir obrigatoriamente o "@" -->
+         
+        
+                 <div class="row">
+                     <div class="col">
+                        <div class="form-group">
+                           <label for="email"><b>Email</b></label>
+                           <input type="email" id="email" name="visitor_email" placeholder="Introduza o seu email" class="form-control rounded-0" required>
+                        </div>
+                     </div>
+                  </div>        
+                          
+                          
+            <!-- Campo check -->
+
+                <!-- "required" = campo de prenchimento obrigatório -->
+                          
+                          <!-- Ao escrever "input type="checkbox" o sistema pede ao utilizador para confirmar os campos de acordo com a política de privacidade -->       
+                          
+                          
+                     <div class="row">
+                        <div class="col">    
+                            <div class="form-group">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" id="gridCheck" name="visitor_check" class="form-control rounded-0" required>
+                                <label class="form-check-label" for="gridCheck"> Li e aceito a Política de <u>Privacidade e Cookies</u> e declaro ter mais de 16 anos. </label>
+                            </div>
+                            </div>
+                        </div>
+                     </div>
+        
+                  
+                          
+              <!-- Campo botão de envio -->
+                   
+                            
+                              <button type="submit" class="btn btn-outline-white text-white btn rounded-0" style="background-color:#663366"><b>Subscrever</b></button>
+
+                        <br>
+                        <br>
+
+                        <p>Todos os campos são de preenchimento obrigatório.</p>
+
+                      </form>
+
+
+        
+  </div>
+      
+
+                       <!-- IMAGEM DO FORMULÁRIO -->
+
+                <div class="col-sm-6">
+
+                   <img src="https://res.cloudinary.com/dwe9vcxln/image/upload/v1754953980/0_zdf5p1.jpg" alt="Avatar" class="d-block w-100">  
+                    
+                     </div>
+                    
+                </div>
+
+             </div> 
+        
+ <!-- FOOTER -->
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm">
+
+                    <div class="footer text-white text-center footer-expand-lg p-3" style="background-color: black">
 
                         <!--  Formulário Newsletter + Redes Sociais + Contactos e Informações -->
 
@@ -682,39 +568,28 @@
                                         <button type="submit" class="btn btn-outline-white text-white btn rounded-0" style="background-color:#663366; padding-left: 60px; padding-right: 60px"><b><a href="newsletterPT.php" style="color:white">Subscrever</a></b></button>
                                     </form>
                                 </div>
-                                
- 
-                                       
-                                
 
                                 <div class="col-sm">
+                                    
 
                                    <!-- Redes Sociais -->
-
+      
                                   <div align="left">
-                                    
-                                    <p class="text">REDES SOCIAIS</p>
+
+                                    <p class="text-left">REDES SOCIAIS</p>
                                     <div class="ul" style="align:left">
-                                        <a href="https://www.instagram.com/susanacarvalhoart"><i class="fab fa-instagram px-2" aria-hidden="true" style="font-size:20px"></i> 
-                                        </a>
-                                        
-                                        <a href="https://www.facebook.com/susanacarvalho.art.77/"><i class="fab fa-facebook-f px-2" aria-hidden="true" style="font-size:18px"></i>  
-                                        </a>
-                                        
-                                        <a href="https://www.pinterest.pt/susanacarvalhoart/"><i class="fab fa-pinterest-p px-2" aria-hidden="true" style="font-size:18px" style="color: white"></i>
-                                        </a>
-                                        
-                                        <a href="https://pt.linkedin.com/in/susana-carvalho-79b01b82"><i class="fab fa-linkedin-in px-2" aria-hidden="true" style="font-size:18px"></i>
-                                        </a>
-                                       
-                                        <a href="https://cara.app/susanacarvalhoart"><img src="https://res.cloudinary.com/dwe9vcxln/image/upload/v1754954441/logocara_jnw1q9.png" width="26" height="26"></a>
-  
-                                        
+                                    
+                                        <a href="https://www.instagram.com/susanacarvalhoart"><i class="fab fa-instagram px-2" style="font-size:20px"></i></a>
+                                        <a href="https://www.facebook.com/susanacarvalho.art.77"><i class="fab fa-facebook-f px-2" style="font-size:18px"></i></a>
+                                        <a href="https://www.pinterest.pt/susanacarvalhoart/"><i class="fab fa-pinterest-p px-2" style="font-size:18px"></i></a>
+                                        <a href="https://pt.linkedin.com/in/susana-carvalho-79b01b82"><i class="fab fa-linkedin-in px-2" style="font-size:18px"></i></a>
+                                      
                                     </div>
-                                 </div>
-                              </div>
-                                
+                                  </div>
+                                </div>
+
                                 <div class="col-sm">
+
 
                                     <!-- Contactos e Informações -->
 
@@ -732,45 +607,43 @@
                         <!-- Linha branca -->
 
                         <br>
-                        <hr class="linha" style="align:center">
+                        <hr class="linha">
                         <br>
 
                         <!-- Direitos Reservados -->
 
                         <p>Política de Privacidade e Cookies Termos e Condições</p>
-                        <p>© 2025 Susana Carvalho - Direitos reservados</p>
+                        <p>© 2019 Susana Carvalho - Direitos reservados</p>
 
 
 
-                        <!-- BOTÃO QUE PUXA TODA A PÁGINA PARA O TOPO -->
-                        <!-- VER - https://www.youtube.com/watch?v=dRR3MbUD1Co -->
+                    <!-- BOTÃO QUE PUXA TODA A PÁGINA PARA O TOPO -->
+                    <!-- VER - https://www.youtube.com/watch?v=dRR3MbUD1Co -->
 
-                        <a class="btn-topo" href="#"><i class="fas fa-angle-up" style="color:#663366"></i></a>
+                    <a class="btn-topo" href="#"><i class="fas fa-angle-up" style="color:#663366"></i></a>
 
-                        <!-- Scripts - Jquery -->
+                    <!-- Scripts - Jquery -->
 
-                        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-                        <script>
-                            $('.btn-topo').click(function)(e) {
-                            e.preventDefault();
-                            $('html,body').animate({
-                                scrollTop: 0
-                            }, 'slow');
-                            });
+                    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+                    <script>
+                        $('.btn-topo').click(function)(e) {
+                        e.preventDefault();
+                        $('html,body').animate({
+                            scrollTop: 0
+                        }, 'slow');
+                        });
 
-                        </script>
-
-                    </div>
+                    </script>
 
                 </div>
+
             </div>
         </div>
+    </div>
 
-  
-       
-      
-     
-<!-- Script para Menu Hamburguer + Close Icon -->
+
+
+    <!-- Script para Menu Hamburguer + Close Icon -->
 
         <script>
             function myFunction(x) {
@@ -778,32 +651,40 @@
             }
 
         </script>
-      
-<!-- Script para search menu completo -->
 
-        <script>
-            function openSearch() {
-                document.getElementById("myOverlay").style.display = "block";
-            }
+    <!-- Script para search menu completo -->
 
-            function closeSearch() {
-                document.getElementById("myOverlay").style.display = "none";
-            }
+    <script>
+        function openSearch() {
+            document.getElementById("myOverlay").style.display = "block";
+        }
 
-        </script> 
-      
-      
-<!-- BOOTSTRAP CODE -->  
-      
+        function closeSearch() {
+            document.getElementById("myOverlay").style.display = "none";
+        }
+
+    </script>
+
+
+    <!-- Script -->
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+
+
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-      
-      
-      
-     
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+
+    <script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
+        
+
 <!-- PUS PHP NA MESMA PÁGINA PARA MODAL APARECER NA MESMA PÁGINA = APARECE MAS SÓ FUNCIONA PORQUE CARREGO NO BOTÃO ENVIAR MENSAGEM E A MENSAGEM DO SUCESSO DE ENVIO POR CAUSA DO MÉTODO GET APARECE SEMPRE EM BAIXO DA PÁGINA = RESOLVER I PHP FUNCIONA MAS PRECISA DE ESTAR TUDO SINCRONIZADO 
 
 NESTE CASO FICAM AS LINGUAGENS TODAS NA MESMA PÁGINA = HTML + CSS + PHP = NÃO ESTOUA VINCULAR UMA PÁGINA DE HTML COM OUTRA DE PHP--> 
@@ -824,8 +705,7 @@ NESTE CASO FICAM AS LINGUAGENS TODAS NA MESMA PÁGINA = HTML + CSS + PHP = NÃO 
 if($_POST) {
     $visitor_name = "";
     $visitor_email = "";
-    $visitor_subject = "";
-    $visitor_message = "";
+    $visitor_subject = "Newsletter PT - Website Susana Carvalho";
     
     $recipient = "susana.c.f.d.carvalho@gmail.com";
 
@@ -846,25 +726,18 @@ if($_POST) {
     }
     
  
-    if(isset($_POST['visitor_subject'])) {
-        $visitor_subject= htmlspecialchars($_POST['visitor_subject']);
-        
+    if(isset($_POST['visitor_check'])) {
+        $visitor_check= filter_var($_POST['visitor_check'], FILTER_SANITIZE_STRING);
     }
     
-     if(isset($_POST['visitor_message'])) {
-        $visitor_message= htmlspecialchars($_POST['visitor_message']);
-        
-    }
-
      
     
-        // parte que mostra informações (assunto + mensagem + primeiro nome do cliente + último nome do cliente + email do cliente) enviadas para o email do proprietário do website após o preenchimento do formulário pelo cliente com sucesso
+        // parte que mostra informações (assunto + primeiro nome do cliente + último nome do cliente + email do cliente) enviadas para o email do proprietário do website após o preenchimento do formulário pelo cliente com sucesso
 
     
     $headers = 'MIME-Version: 1.0' . "\r\n"
       
   .'Assunto:  ' . $visitor_subject . "\r\n"
-  .'Mensagem:  ' . $visitor_message . "\r\n"
   .'Primeiro Nome do cliente:  ' . $visitor_name . "\r\n"
   .'Último Nome do cliente:  ' . $visitor_fname . "\r\n"     
   .'Email do cliente: ' . $visitor_email . "\r\n";
@@ -873,7 +746,7 @@ if($_POST) {
         // mensagens que aparecem em método "POST" numa outra página a validar ou não a entrega da mensagem ao cliente após o preenchimento do formuário
     
     
-    if(mail($recipient, $visitor_message, $headers)) {
+    if(mail($recipient, $visitor_subject, $headers)) {
         
         
              // mensagem mostrada ao cliente sobre envio ou não da as informações preenchidas no formulário de contacto para o email do proprietário do website 
@@ -888,7 +761,7 @@ if($_POST) {
             // código em PHP que, após o prrenchimento total dos campos do formulário de contacto,  redireciona a página de "CONTACTO.PHP" para outra que queiramos que seja a página de sucesso de envio = URL=.....= vai indicar a página para onde queremos que vá o user após o preenchimento correcto do form.
         
         
-        echo'<META HTTP-EQUIV="Refresh" Content="1; URL=paginavalidacaocorreta_contactoPT.php">';
+        echo'<META HTTP-EQUIV="Refresh" Content="1; URL=paginavalidacaocorreta_newsletterPT.php">';
         
       
              //  echo "PARABÉNS!" . $name . "<br>";echo "<p>Obrigada pelo contacto, $visitor_name. Será contactado em menos de 24 horas.</p>"; } else { echo "UPS..." . $name . "<br>"; echo '<p>Pedimos desculpa, mas algo de errado aconteceu.</p>'; }}else{echo '<p>Algo não funcionou.</p>';}         = nesta linha de código foram apagadas as mengagens raiz dos Echo "..." para que não apareça nenhuma mensagem de validação ou não na página, visto que já coloquei um link que após o sucesso do preenchimento do formulário d vai reecaminhar para outra página isolada com um botão que se liga ao início do site = o objectivo é que tenha um lado estético e funcional não deixando o cliente sair do website = foi usado este código =    echo'<META HTTP-EQUIV="Refresh" Content="1; URL=paginadevalidacaocorrecta_contacto.php">';  = para se remeter  a nossa validação para a página pretendida + as mensagens caem no email de forma correta também
@@ -913,15 +786,6 @@ if($_POST) {
 
 ?>
     
-   
-      
-      
-      
-      
-      
-      
-      
-      
-      
-  </body>
+</body>
+
 </html>
