@@ -1,39 +1,58 @@
 <!DOCTYPE html>
-<html>   
-    
+<html lang="pt">
 <head>
-   
-   <style>  
-     
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #131310;
-      }
-     
-     
-     .imagem-container {
-        text-align: center;
-     }
-     
-   </style>
-     
+
+   <style> 
+       
+       body 
+       {font-family:arial, helvetica,sans-serif}
+       
+       .content
+       {display:flex; justify-content: center}
+       
+       .contato
+       {width:100%; max-height: 500px;}
+        
+       .form
+       {display: flex;flex-direction: column}
+         
+       .field
+       {padding:10px;margin-bottom:15px;border:1px solid #000;border-radius:5px;font-family: arial, helvetica, sans-serif;font-size:16px}
+       
+       textarea
+       {height:150px}
+       
+   </style>  
+    
+    
+    
 </head>
-    
-    
+
 <body>
-
-      <div class="imagem-container">
-            <div class="row">
-                     <div class="text-align: center;">
-                         
-                           <img src="imagem/empty%20state.png" >
-
-                     </div>        
-             </div>   
-       </div>   
     
+    <section class="content">
+        <div class="contato">
+  
+            <h3>Formulário de contacto</h3>
+            
+            <form class="form" method="POST" action="./email.php"> 
+            
+                <input class="field" name="name" placeholder="Nome">
+                <input class="field" name="email" placeholder="E-mail">
+                <textarea class="field" name="message" placeholder="digite a sua mensagem">
+                    
+                    
+                </textarea>
+                 <input class="field" type="submit" value="Enviar"   >
+            
+            </form>
+        
+        </div> 
+    </section>
+    
+  
 </body>
-    
 </html>
