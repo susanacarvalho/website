@@ -418,7 +418,81 @@
       }
      
 
+     
+      /* imagem da secção sobre mim com movimento*/
+    
+     
+     /* Definição do movimento */
+@keyframes tremer {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+  25% { transform: translateX(-5px) rotate(-1deg); }
+  75% { transform: translateX(5px) rotate(1deg); }
+}
 
+/* Classe que aplica o efeito ao passar o mouse */
+.shake:hover {
+  animation: tremer 0.5s; /* Duração de 0.2 segundos */
+  animation-iteration-count: infinite; /* Fica tremendo enquanto o mouse estiver em cima */
+}
+
+/* Se quiser que trema apenas uma vez (ex: erro de formulário) */
+.shake-once {
+  animation: tremer 0.4s;
+    
+    
+}
+     
+  
+/* efeito de sombreado no conjunto de imagens novidades */   
+     
+   .gallery-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  /* 1. Define a opacidade inicial (70%) */
+  opacity: 0.7;
+  /* 2. Transição suave */
+  transition: opacity 0.5s ease;
+}
+
+.gallery-item img:hover {
+  /* 3. Opacidade total no hover */
+  opacity: 1;
+}  
+     
+ 
+   
+/* linha com degrade navebar */    
+     
+     .navbar {
+  position: relative;
+  padding: 15px 20px;
+}
+
+/* Criando uma linha independente */
+.navbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  /* Gradiente que dá um ar de "luz" à linha */
+  background: linear-gradient(to right, transparent, #663366, transparent);
+}
+     
+     
+     
+     
+    
+
+     
+
+     
      
      
         /* MEDIA QUERIES */
@@ -442,6 +516,10 @@
                  
         }
              
+     
+     
+     
+     
      
 </style>  
       
@@ -543,7 +621,7 @@
                     <!-- MENU PRINCIPAL -->
 
                     <nav class="navbar navbar-expand-lg navbar-light bg-black">
-                        <a class="navbar-brand" href="inicioPT.html"><img src="imagens/logotipo.jpg" class="d-block w-50"></a>
+                        <a class="navbar-brand" href=""><img src="imagens/logotipo2.jpg" class="d-block w-50"></a>
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: none">
 
@@ -601,7 +679,7 @@
       
       
       
-<!-- SLIDER ou CAROUSEL -->     
+<!-- SLIDER ou CAROUSEL   
       
       <div class="container">
                 <div class="row">
@@ -629,7 +707,7 @@
                </div>
             </div>
         </div>  
-      
+    -->     
       
    <br>   
    <br>    
@@ -654,11 +732,9 @@
                                   <!--  Para encostar as palavras à linha das imagens = retirar padding à esquerda no body do card que engloba os títulos e sub-títulos = <div class="card-body" style="padding-left:0">  -->
                     
                    <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="card2">
-                            <a href="#novidades">
-                               <div class="zoom"> 
-                                  <img class="card-img-top" src="imagens/novidade1.jpg" class="img-responsive" alt="Card image cap" >
-                               </div>  
+                        <div class="gallery-item img ">
+                            <a href="">
+                                  <img class="card-img-top" src="imagens/novidade1.jpg" class="img-responsive" alt="Card image cap" > 
                             </a>       
                             <div class="card-body" style="padding-left:0" style=" width: 92%;">
                                    <p class="card-text">21 mar 2026 - 21 mai 2026</p> 
@@ -670,11 +746,9 @@
                         <!-- NOVIDADES 2 -->
                     
                     <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="card2">
-                            <a href="novidadesPT.html">
-                                <div class="zoom">
+                        <div class="gallery-item img ">
+                            <a href="">
                                    <img class="card-img-top" src="imagens/novidade2.jpg" class="img-responsive" alt="Card image cap">
-                                </div>
                             </a>     
                             <div class="card-body" style="padding-left:0">
                                  <p class="card-text">19 dez 2025 - 21 dez 2025 </p>
@@ -686,11 +760,9 @@
                         <!-- NOVIDADES 3 -->
                     
                     <div class="col-12 col-sm-6 col-lg-4">
-                        <div class="card2">
-                            <a href="novidadesPT.html">
-                              <div class="zoom"> 
+                        <div class="gallery-item img">
+                            <a href="">
                                  <img class="card-img-top" src="imagens/novidade3.jpg" alt="Card image cap">
-                              </div> 
                             </a>     
                             <div class="card-body" style="padding-left:0">
                                <p class="card-text">10 out 2025 - 30 nov 2025</p> 
@@ -727,42 +799,42 @@
                         <!-- PROJETO 1 -->
 
                         <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
+                            <a href="">
                               <div class="zoom"> 
                                 <img class="card-img-top" src="imagens/projeto1.jpg" alt="Card image cap">
                               </div> 
                             </a>   
                             <div class="card-body" style="padding-left:0">
                                 <p class="card-text"><i>Técnica Mista I Acrílico, marcador e caneta</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Mirror Sphere I</a></b></h5>
+                                <h5 class="card-title"><b><a href="">Mirror Sphere I</a></b></h5>
                             </div>
                         </div>
 
                         <!-- PROJETO 2 -->
 
                         <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
+                            <a href="">
                               <div class="zoom"> 
                                 <img class="card-img-top" src="imagens/projeto2.jpg" alt="Card image cap">
                               </div>    
                             </a>   
                             <div class="card-body" style="padding-left:0">
                                 <p class="card-text"><i> Técnica Mista I Acrílico, marcador e caneta</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Mirror Sphere II</a></b></h5>
+                                <h5 class="card-title"><b><a href="">Mirror Sphere II</a></b></h5>
                             </div>
                         </div>
 
                         <!-- PROJETO 3 -->
                         
                         <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
+                            <a href="">
                               <div class="zoom">
                                 <img class="card-img-top" src="imagens/projeto3.jpg" alt="Card image cap">
                               </div>   
                             </a> 
                             <div class="card-body" style="padding-left:0">
                                 <p class="card-text"><i>Técnica Mista I Acrílico, marcador e caneta</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Mirror Sphere III</a></b></h5>
+                                <h5 class="card-title"><b><a href="">Mirror Sphere III</a></b></h5>
                             </div>
                         </div>
                   </div>
@@ -779,42 +851,42 @@
                         <!-- PROJETO 4 -->
 
                         <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
+                            <a href="">
                               <div class="zoom"> 
                                 <img class="card-img-top" src="imagens/projeto4.jpg" alt="Card image cap">
                               </div> 
                             </a>   
                             <div class="card-body" style="padding-left:0">
                                 <p class="card-text"><i>Técnica Mista I Acrílico, marcador e caneta</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Dry I</a></b></h5>
+                                <h5 class="card-title"><b><a href="">Dry I</a></b></h5>
                             </div>
                         </div>
 
                         <!-- PROJETO 5 -->
 
                         <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
+                            <a href="">
                               <div class="zoom"> 
                                 <img class="card-img-top" src="imagens/projeto5.jpg" alt="Card image cap">
                               </div>    
                             </a>   
                             <div class="card-body" style="padding-left:0">
                                 <p class="card-text"><i> Técnica Mista I Acrílico, marcador e caneta </i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Dry II</a></b></h5>
+                                <h5 class="card-title"><b><a href="">Dry II</a></b></h5>
                             </div>
                         </div>
 
                         <!-- PROJETO 6 -->
                         
                         <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
+                            <a href="">
                               <div class="zoom">
                                 <img class="card-img-top" src="imagens/projeto6.jpg" alt="Card image cap">
                               </div>   
                             </a> 
                             <div class="card-body" style="padding-left:0">
                                 <p class="card-text"><i>Técnica Mista I Acrílico, marcador e caneta</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Dry III</a></b></h5>
+                                <h5 class="card-title"><b><a href="">Dry III</a></b></h5>
                             </div>
                         </div>
                   </div>
@@ -830,42 +902,42 @@
                         <!-- PROJETO 7 -->
 
                         <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
+                            <a href="">
                               <div class="zoom"> 
                                 <img class="card-img-top" src="imagens/projeto7.jpg" alt="Card image cap">
                               </div> 
                             </a>   
                             <div class="card-body" style="padding-left:0">
                                 <p class="card-text"><i>Técnica Mista I Acrílico, marcador e caneta</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Sacred Nature I</a></b></h5>
+                                <h5 class="card-title"><b><a href="">Sacred Nature I</a></b></h5>
                             </div>
                         </div>
 
                         <!-- PROJETO 8 -->
 
                         <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
+                            <a href="">
                               <div class="zoom"> 
                                 <img class="card-img-top" src="imagens/projeto8.jpg" alt="Card image cap">
                               </div>    
                             </a>   
                             <div class="card-body" style="padding-left:0">
                                 <p class="card-text"><i> Técnica Mista I Acrílico, marcador e caneta </i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Sacred Nature II</a></b></h5>
+                                <h5 class="card-title"><b><a href="">Sacred Nature II</a></b></h5>
                             </div>
                         </div>
 
                         <!-- PROJETO 9 -->
                         
                         <div class="col-12 col-sm-6 col-lg-4">
-                            <a href="projetosTecnicaMistaPT.html">
+                            <a href="">
                               <div class="zoom">
                                 <img class="card-img-top" src="imagens/projeto9.jpg" alt="Card image cap">
                               </div>   
                             </a> 
                             <div class="card-body" style="padding-left:0">
                                 <p class="card-text"><i>Técnica Mista I Acrílico, marcador e caneta</i></p>
-                                <h5 class="card-title"><b><a href="projetosTecnicaMistaPT.html">Sacred Nature III</a></b></h5>
+                                <h5 class="card-title"><b><a href="">Sacred Nature III</a></b></h5>
                             </div>
                         </div>
                   </div>
@@ -886,12 +958,12 @@
     
       
 <div class="container" px-3>     
-  <p class="h4 py-4" style="font-family:Brandon Grotesque; color:#333333; font-style: normal; font-size:26px; padding-left:0"><a href="susanacarvalhoPT.html">SUSANA CARVALHO</a></p>
+  <p class="h4 py-4" style="font-family:Brandon Grotesque; color:#333333; font-style: normal; font-size:26px; padding-left:0"><a href="#sobremim">SUSANA CARVALHO</a></p>
       <div class="row">
           
          <div class="col-sm-6">
-            <div class="card">
-                <div class="card-body"style="padding-left:0">
+            <div class="shake">
+                <div class="card-body" style="padding-left:0">
                       <img src="imagens/contacto1.jpg" class="w-100" >   
                 </div>
              </div>
@@ -907,14 +979,16 @@
                     Licenciada em Pintura pela FBAUL.
                     <br>                        
                     <br>                       
-                    Começa a expor em 2010.
+                    Começa a expor em galerias no ano de 2010.
                     <br>                        
                     <br>                                         
                     O seu processo de trabalho desenvolve-se nas áreas de pintura, desenho, gravura e arte digital.
                     <br>
                     <br> 
                     As suas obras abordam conceitos de <em>Espírito do
-                    Lugar</em> e <em>Espelho</em> dentro do tema da Paisagem.
+                    Lugar</em> e de <em>Espelho</em> dentro do tema da Paisagem. 
+                    Assim como temas relativos à crise climática e seus impactos na atualidade. 
+                  
                     </p>
                 </div>
              </div>
@@ -954,7 +1028,7 @@
 
                                     <p class="text-left">NEWSLETTER</p>
                                     <form class="form-inline">
-                                        <button type="submit" class="btn btn-outline-white text-white btn rounded-0" style="background-color:#663366; padding-left: 60px; padding-right: 60px"><b><a href="newsletterPT.php" style="color:white">Subscrever</a></b></button>
+                                        <button type="submit" class="btn btn-outline-white text-white btn rounded-0" style="background-color:#663366; padding-left: 60px; padding-right: 60px"><b><a href="" style="color:white">Subscrever</a></b></button>
                                     </form>
                                 </div>
                                 
@@ -981,9 +1055,10 @@
                                         
                                         <a href="https://pt.linkedin.com/in/susana-carvalho-79b01b82"><i class="fab fa-linkedin-in px-2" aria-hidden="true" style="font-size:18px"></i>
                                         </a>
-                                       
-                                        <a href="https://cara.app/susanacarvalhoart"><img src="imagens/logocara.png"  width="23" height="23"></a>
-  
+                                        
+                                    
+                                        <a href="https://cara.app/susanacarvalhoart/portfolio"><img src="imagens/logocara.png"  width="25"   height="25"></a>
+                                   
                                         
                                     </div>
                                  </div>
@@ -997,11 +1072,13 @@
 
                                     <p class="text-left">Tem alguma questão ou sugestão <br> que gostaria de partilhar?</p>
                                        <div align="left"> 
-                                         <button type="submit" class="btn rounded-0" style="background-color:#663366; padding-left: 16px; padding-right: 16px"><a href="contactoPT.php"><i class="far fa-envelope" style="font-size:18px; color:white;"></i></a></button> 
+                                         <button type="submit" class="btn rounded-0" style="background-color:#663366; padding-left: 16px; padding-right: 16px"><a href=""><i class="far fa-envelope" style="font-size:18px; color:white;"></i></a></button> 
                                        </div>
                                 </div>
                             </div>
                         </div>
+                        
+                        
 
 
                         <!-- Linha branca -->
