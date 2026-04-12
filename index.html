@@ -1,39 +1,12 @@
-<!DOCTYPE html>
-<html>   
-    
-<head>
-   
-   <style>  
-     
-    
-      body {
-        margin: 0;
-        padding: 0;
-        background-color: #131310;
-      }
-     
-     
-     .imagem-container {
-        text-align: center;
-     }
-     
-   </style>
-     
-</head>
-    
-    
-<body>
+<form action="enviar.php" method="POST">
+    <label for="nome">Nome:</label>
+    <input type="text" name="nome" required>
 
-      <div class="imagem-container">
-            <div class="row">
-                     <div class="text-align: center;">
-                         
-                           <img src="imagem/empty%20state.png" >
+    <label for="email">E-mail:</label>
+    <input type="email" name="email" required>
 
-                     </div>        
-             </div>   
-       </div>   
-    
-</body>
-    
-</html>
+    <label for="mensagem">Mensagem:</label>
+    <textarea name="mensagem" required></textarea>
+
+    <button type="submit">Enviar Mensagem</button>
+</form>
