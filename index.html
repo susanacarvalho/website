@@ -74,6 +74,7 @@
             font-family: sans-serif;
             background-color: white;
             white-space: nowrap;
+            
         }
 
         .navbar span {
@@ -96,7 +97,9 @@
      
         .logo{
               padding: 0px;
-      }
+            
+            
+         }
 
         /*LINHA FIXA LINK = para a linha que tem a pagina aberta ficar fixa */
 
@@ -144,7 +147,7 @@
             padding: 3px 12px;
             background: black;
             color: gray;
-            border: 2px solid gray;
+            border:  gray;
             text-decoration: none;
             position: absolute;
             right: 20px;
@@ -427,13 +430,13 @@
     
      
      /* Definição do movimento */
-@keyframes tremer {
-  0% { transform: translateX(0); }
-  25% { transform: translateX(-5px); }
-  50% { transform: translateX(5px); }
-  75% { transform: translateX(-5px); }
-  100% { transform: translateX(0); }
-  25% { transform: translateX(-5px) rotate(-1deg); }
+            @keyframes tremer {
+            0% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            50% { transform: translateX(5px); }
+            75% { transform: translateX(-5px); }
+            100% { transform: translateX(0); }
+            25% { transform: translateX(-5px) rotate(-1deg); }
   75% { transform: translateX(5px) rotate(1deg); }
 }
 
@@ -495,7 +498,7 @@
      
      
     
-.logo img {
+.logotipo2 {
     height: 50px; /* Ajuste o tamanho do seu logo */
     display: block; /* Remove espaços vazios abaixo da imagem */
     margin-left: 0; /* Garante que não há margem na esquerda */
@@ -627,10 +630,11 @@
          </div>                         
                     
                     
+             
                     <!-- MENU PRINCIPAL -->
 
                     <nav class="navbar navbar-expand-lg navbar-light bg-black">
-                        <a class="navbar-brand" href="logo"><img src="imagens/logotipo2.jpg" class=" w-50"></a>
+                        <a class="navbar-brand" href="logo"><img src="imagens/logotipo2.jpg" class="d-block w-50"></a>
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="border: none">
 
@@ -1105,7 +1109,7 @@
                         <!-- BOTÃO QUE PUXA TODA A PÁGINA PARA O TOPO -->
                         <!-- VER - https://www.youtube.com/watch?v=dRR3MbUD1Co -->
 
-                        <a class="btn-topo" href="#"><i class="fas fa-angle-up" style="color:#663366"></i></a>
+                        <a class="btn-topo" href="#"><i class="fas fa-angle-up" style="color:#663366" style="border: none"></i></a>
 
                         <!-- Scripts - Jquery -->
 
